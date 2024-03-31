@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "gruntfuggly.todo-tree",
+    "bradlc.vscode-tailwindcss",
+    "yoavbls.pretty-ts-errors",
+    "esbenp.prettier-vscode",
+    "csstools.postcss",
+    "ms-vsliveshare.vsliveshare",
+    "firsttris.vscode-jest-runner",
+    "oderwat.indent-rainbow",
+    "wengerk.highlight-bad-chars",
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+    "dbaeumer.vscode-eslint"
+  ]
+}

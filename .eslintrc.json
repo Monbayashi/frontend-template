@@ -1,3 +1,32 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "tailwindcss/no-custom-classname": "off", // 不具合回避の為 (存在するはずのclassに対して"no-custom-classname"が発生する)
+    "react/jsx-curly-brace-presence": "error", // 文字列属性に波括弧は不要
+    "react/self-closing-comp": [
+      // 子のないコンポーネントに対する余分な終了タグを禁止
+      "error",
+      {
+        "component": true,
+        "html": false
+      }
+    ],
+    "@next/next/no-img-element": "off" // imgタグを使用できるようにする。
+  }
 }
