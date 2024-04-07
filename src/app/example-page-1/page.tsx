@@ -1,5 +1,7 @@
 import { ExamplePage1 } from '@/components/pages/example-page-1';
 
-export default function HomeAppPage() {
+const ExampleAppPage1 = () => {
   return <ExamplePage1 />;
-}
+};
+
+export default ExampleAppPage1;
