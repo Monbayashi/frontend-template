@@ -1,3 +1,4 @@
+import { Menu01 } from '@/components/projects/main-layout/menu-01';
 import { routes, routesKeyType } from '@/utils/routes';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -13,18 +14,10 @@ export const Sidebar = (props: SidebarProps) => {
     <nav
       id="page-sidebar"
       className={`${props.disabled ? 'hidden' : ''} fixed inset-y-0 start-0 z-50 flex h-full w-80 flex-col overflow-auto bg-slate-100 transition-transform duration-500 ease-out lg:w-64 lg:translate-x-0`}
-      //     x-bind:className="{
-      //   'ltr:-translate-x-full rtl:translate-x-full': !mobileSidebarOpen,
-      //   'translate-x-0': mobileSidebarOpen,
-      //   'ltr:lg:-translate-x-full rtl:lg:translate-x-full': !desktopSidebarOpen,
-      //   'ltr:lg:translate-x-0 rtl:lg:translate-x-0': desktopSidebarOpen,
-      // }"
       aria-label="Main Sidebar Navigation"
-      // x-cloak
     >
-      {/* <!-- Sidebar Header --> */}
       <div className="flex h-20 w-full flex-none items-center justify-between px-8">
-        <a className="inline-flex items-center gap-2 text-lg font-medium tracking-wide text-slate-800 transition hover:opacity-75 active:opacity-100">
+        <a className="span-medium inline-flex items-center gap-2 text-lg tracking-wide text-slate-800 transition hover:opacity-75 active:opacity-100">
           <Image
             src="/saint-care.svg"
             alt="saint-care"
@@ -35,8 +28,6 @@ export const Sidebar = (props: SidebarProps) => {
           />
           <span>SantCare Chant</span>
         </a>
-
-        {/* <!-- Close Sidebar on Mobile --> */}
         <div className="lg:hidden">
           <button
             type="button"
@@ -57,7 +48,6 @@ export const Sidebar = (props: SidebarProps) => {
             </svg>
           </button>
         </div>
-        {/* <!-- END Close Sidebar on Mobile --> */}
       </div>
       {/* <!-- END Sidebar Header --> */}
 
@@ -68,7 +58,7 @@ export const Sidebar = (props: SidebarProps) => {
             const value = routes[key as routesKeyType];
             const isActived = value.id === props.routeId;
             const className =
-              'inline-flex items-center gap-2 rounded-lg p-2 text-md font-semibold transition';
+              'inline-flex items-center gap-2 rounded-lg p-2 text-md span-semibold transition';
             return isActived ? (
               <li key={value.id}>
                 <Link href={value.href} className={`${className} bg-indigo-100 text-indigo-900`}>
@@ -86,18 +76,26 @@ export const Sidebar = (props: SidebarProps) => {
               </li>
             );
           })}
+          <li
+            key="001"
+            className="span-semibold inline-flex items-center gap-2 rounded-lg p-2 text-lg transition"
+          >
+            <span>BI・経営データ</span>
+          </li>
+          <Menu01 />
+          <Menu01 />
         </ul>
         <hr className="h-px border-0 bg-gray-200 dark:bg-gray-700" />
         <ul className="w-full space-y-1.5 px-8 py-4">
           <li>
-            <a className="text-md inline-flex items-center gap-2 rounded-lg p-2 font-semibold text-slate-600 transition hover:bg-indigo-100 hover:text-indigo-900">
+            <a className="text-md span-semibold inline-flex items-center gap-2 rounded-lg p-2 text-slate-600 transition hover:bg-indigo-100 hover:text-indigo-900">
               <span>Setting</span>
             </a>
           </li>
           <li>
             <Link
               href="/login"
-              className="text-md inline-flex items-center gap-2 rounded-lg p-2 font-semibold text-slate-600 transition hover:bg-indigo-100 hover:text-indigo-900"
+              className="text-md span-semibold inline-flex items-center gap-2 rounded-lg p-2 text-slate-600 transition hover:bg-indigo-100 hover:text-indigo-900"
             >
               <span>Logout</span>
             </Link>
