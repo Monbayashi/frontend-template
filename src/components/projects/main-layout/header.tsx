@@ -9,9 +9,9 @@ export const Header = (props: HeaderProps) => {
   return (
     <header
       id="page-header"
-      className={`${props.disabled ? '' : 'lg:pl-64'} fixed end-0 start-0 top-0 z-30 flex h-20 flex-none items-center border-b border-slate-100 bg-white/90 backdrop-blur-sm`}
+      className={`${props.disabled ? '' : 'lg:pl-64'} fixed end-0 start-0 top-0 z-10 flex h-20 flex-none items-center border-b border-slate-100 bg-white/90 backdrop-blur-sm`}
     >
-      <div className="container mx-auto flex justify-between px-4 lg:px-8 xl:max-w-7xl">
+      <div className="container mx-auto flex justify-between px-4 lg:px-8">
         <div className="flex items-center">
           <div className="lg:block">
             <button

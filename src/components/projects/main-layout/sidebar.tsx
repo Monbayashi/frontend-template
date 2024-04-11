@@ -13,7 +13,7 @@ export const Sidebar = (props: SidebarProps) => {
   return (
     <nav
       id="page-sidebar"
-      className={`${props.disabled ? 'hidden' : ''} fixed inset-y-0 start-0 z-50 flex h-full w-80 flex-col overflow-auto bg-slate-100 transition-transform duration-500 ease-out lg:w-64 lg:translate-x-0`}
+      className={`${props.disabled ? 'hidden' : ''} fixed inset-y-0 start-0 z-20 flex h-full w-80 flex-col overflow-auto bg-slate-100 transition-transform duration-500 ease-out lg:w-64 lg:translate-x-0`}
       aria-label="Main Sidebar Navigation"
     >
       <div className="flex h-20 w-full flex-none items-center justify-between px-8">
